@@ -41,6 +41,8 @@ namespace Alura.CoisasAFazer.Services.Handlers
             }
             catch (Exception e)
             {
+                _logger.LogError(e, e.Message);
+                //_logger.LogError(ex, ex.Message);
                 return new CommandResult(false);
             }
         }
